@@ -15,8 +15,8 @@ from app.middlewares.logging_middleware import LoggingMiddleware
 # Importar rutas
 from app.routes import conductores, viajes, lecturas, alertas
 
-# Crear las tablas en la base de datos
-Base.metadata.create_all(bind=engine)
+# Nota: Las tablas se crean con el script: python -m app.utils.create_tables
+# Base.metadata.create_all(bind=engine)
 
 # Crear instancia de FastAPI
 app = FastAPI(
